@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "nombre":"Susana",
+        "descripción": "Excelente producto, muy bonito"
+        
+    },
+    {
+        "id": 2,
+        "nombre":"Julieta",
+        "descripción": "Son bastante accesibles en cuestion de presion, me encantaron para llevarlos a la playa en verano, son fantasticos y no me lastimaron, estan perfectos "
+        
+    },
+    {
+        "id": 3,
+        "nombre":"Erik",
+    "descripción": "Bastane corrientes, se los regale a mi novia y a los pocos dias de usarlos, se les callo la floresita, quiero un rembolso!!"
+    }
+]
