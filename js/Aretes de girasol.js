@@ -21,7 +21,7 @@ function cel(){
                 //console.log(item.precio);
              if(item.id==1){ res.innerHTML += "<td>Id</td><td>"+item.id+"</td><tr><td>Nombre</td><td> "
              +item.nombre+"</td><tr><td>Cantidad</td><td>"+item.cantidad+"</td><tr><td>Descripcion</td><td>"
-             +item.descripción+"</td><tr><td>Precio</td><td>"+item.precio+
+             +item.descripcion+"</td><tr><td>Precio</td><td>"+item.precio+
              "</td>"
             }
                
