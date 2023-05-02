@@ -8,7 +8,7 @@ function cel(){
 
     xhttp.send();
     xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState == 4 && this.status  == 200) {
             console.log(this.responseText);
             let datos = JSON.parse(this.responseText);
             console.log(datos)
@@ -19,6 +19,7 @@ function cel(){
 
             for (let item of datos) {
                 //console.log(item.precio);
+                console.log(item.precio);
              res.innerHTML += "<td>"+item.nombre+ "</td><td>"+item.descripción+"</td>"
                 
             
