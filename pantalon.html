@@ -143,11 +143,10 @@
       </div>
     </div>
   </header>
-
   <div class="container">
     <div class="row">
       <div class="col-lg-6">
-        <img src="img/Pantalon gris.jpeg" id="imagenes" title="pantalon" alt="pantalon">
+        <img src="img/Pantalon gris.jpeg" class="img-fluid" title="Arete girasol" alt="Arete girasol">
       </div>
 
       <div class="col-lg-6">
@@ -179,16 +178,16 @@
           <br><br>
           <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
             <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="ZRH3XRBCEY6LQ">
-            <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
-             </form>
-            
+            <input type="hidden" name="hosted_button_id" value="F78T5Y953M3VJ">
 
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="E9V4N3FGHKQUG">
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
-            </form>
+
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_SM.gif" border="0" name="submit"
+              alt="PayPal, la forma más segura y rápida de pagar en línea.">
+          </form>
+          <br>
+          <br>
+
+          <div id="paypal-button-container" style="text-align: center"></div> 
           <br>
           <br>
         </div>
@@ -268,6 +267,32 @@
         </div>
       </div>
     </footer>
+
+
+
+
+    <script src="https://www.paypal.com/sdk/js?client-id=AU4PD63W4zCsCR_PKoyYvTuQDh3d-KlEewpepu1VtE5tgp3kCsNUbNwhUAtpNwSpObc5-yjrsnxD2ADV&currency=MXN"></script>
+    <script>
+    paypal.Buttons({
+        createOrder: function(data, actions){
+            return actions.order.create({
+                purchase_units:[{
+                    amount:{
+                        value: 99
+                    }
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                console.log()
+                alert('Compra exitosa de pantalon por ' + details.payer.name.given_name);
+                window.localtion.href="index.html";
+            }); 
+        }
+    }).render('#paypal-button-container');
+</script>
+
 
 
   <script src="js/PantalonGris.js"></script>
