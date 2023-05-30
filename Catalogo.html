@@ -29,6 +29,59 @@
 		gtag('config', 'G-XDY927KX9Q');
 	</script>
   
+  <!--Script filtro de busqueda-->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const filterSelect = document.getElementById('filter');
+      const cardsContainer = document.querySelector('.row');
+  
+      filterSelect.addEventListener('change', () => {
+        const selectedOption = filterSelect.value;
+  
+        // Obtiene los elementos de las tarjetas
+        const cards = Array.from(cardsContainer.getElementsByClassName('card'));
+  
+        // Ordena los elementos según la opción seleccionada
+        switch (selectedOption) {
+          case 'asc':
+            cards.sort((a, b) => a.querySelector('h5').textContent.localeCompare(b.querySelector('h5').textContent));
+            break;
+          case 'desc':
+            cards.sort((a, b) => b.querySelector('h5').textContent.localeCompare(a.querySelector('h5').textContent));
+            break;
+          default:
+            // Predeterminado: mantener el orden original
+            break;
+        }
+  
+        // Vuelve a agregar las tarjetas al contenedor en el nuevo orden
+        cards.forEach((card) => cardsContainer.appendChild(card));
+      });
+    });
+
+    function ordenarPorPrecio(orden) {
+      var tabla = document.getElementById("tablaPersonas");
+      var filas = tabla.getElementsByTagName("tr");
+      var arr = Array.prototype.slice.call(filas, 1);
+
+      arr.sort(function(a, b) {
+        var precioA = parseFloat(a.getAttribute("data-precio"));
+        var precioB = parseFloat(b.getAttribute("data-precio"));
+
+        if (orden === "asc") {
+          return precioA - precioB;
+        } else {
+          return precioB - precioA;
+        }
+      });
+
+      for (var i = 0; i < arr.length; i++) {
+        tabla.appendChild(arr[i]);
+      }
+    }
+  </script>
+  
+
   <title>MisLindasChacharas || Catalogo</title>
   <style>
     #espacio {
@@ -59,8 +112,15 @@
     #tablaPersonas {
 
       margin-top: 20px;
-      ;
+      
     }
+
+    .center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
   </style>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -123,6 +183,22 @@
     <h1>Catalago</h1>
     <br>
     <br>
+
+    <!--Filtro de busqueda-->
+    <div class="center-container">
+      <div class="filter-container">
+        <label for="filter">Ordenar por:</label>
+        <select id="filter">
+          <option value="default">Predeterminado</option>
+          <option value="asc">Orden alfabético ascendente</option>
+          <option value="desc">Orden alfabético descendente</option>
+          <option value="asc">Precio ascendente</option>
+          <option value="desc">Precio descendente</option>
+        </select>
+      </div>
+    </div>
+    
+
     <div class="container">
       <div class="row">
 
@@ -133,9 +209,7 @@
                 <img src="img/Aretes de girasol.png" style="width: 190px;" title="Aretes de girasol" alt="Aretes de girasol">
                 <br>
                 <h5>Aretes de girasol</h5>
-
-                <p>Precio: $35.00</p>
-
+                <p class="card-price" data-precio="35.00">$35.00</p>
               </div>
               <a href="Aretes de girasol.html" title="aretegirasol"><button class="btn btn-sm btn-outline-secondary" id="cyn">Ir</button></a>
             </div>
@@ -149,7 +223,7 @@
                 <img src="img/Aretes de nubes.png" style="width: 190px;" title="Aretes de nube" alt="Aretes de nube">
                 <br>
                 <h5>Aretes de Nube</h5>
-                <p>Precio: $50.00</p>
+                <p class="card-price" data-precio="50.00">$50.00</p>
               </div>
               <a href="Aretes de Nube.html" title="aretesnube"><button class="btn btn-sm btn-outline-secondary" id="evg">Ir</button></a>
             </div>
@@ -163,8 +237,7 @@
                 <img src="img/Aretes de panda.png" style="width: 190px;" title="Aretes de panda" alt="Aretes de panda">
                 <br>
                 <h5>Aretes de panda</h5>
-                <p>Precio: $35.00</p>
-
+                <p class="card-price" data-precio="35.00">$35.00</p>
               </div>
               <a href="Aretes de panda.html" title="aretespanda"><button class="btn btn-sm btn-outline-secondary" id="son">Ir</button></a>
             </div>
@@ -178,8 +251,7 @@
                 <img src="img/Balsamo.png" style="width: 190px;" title="balsamo" alt="balsamo">
                 <br>
                 <h5>Balsamo</h5>
-                <p>Precio: $20.00</p>
-  
+                <p class="card-price" data-precio="20.00">$20.00</p>
             </div>
             <a href="Balsamo.html" title="balsamo"><button
             class="btn btn-sm btn-outline-secondary" id="cyn">Ir</button></a>
@@ -194,8 +266,7 @@
               <img src="img/Mascarillas.png" style="width: 130px;" title="mascarillas" alt="mascarillas">
                 <br>
                 <h5>Mascarillas</h5>
-                
-                <p>Precio: $5.00</p>
+                <p class="card-price" data-precio="5.00">$5.00</p>
             </div>
             
             <a href="mascarillas.html" title="mascarillas"><button
@@ -212,8 +283,7 @@
               <img src="img/Crema.jpeg" style="width: 150px;" title="crema" alt="crema">
                 <br>
                 <h5>Cremas para manos </h5>
-                <p>Precio: $10.00</p>
-  
+                <p class="card-price" data-precio="10.00">$10.00</p>
             </div>
             <a href="Cremas.html" title="cremas"><button
             class="btn btn-sm btn-outline-secondary" id="son">Ir</button></a>
@@ -229,8 +299,7 @@
                 <img src="img/faldaamarilla.png" style="width: 175px;" title="falda" alt="falta">
                 <br>
                 <h5>Falda Tableada </h5>
-                <p>Precio: $99.00</p>
-  
+                <p class="card-price" data-precio="99.00">$99.00</p>
             </div>
             <a href="FaldaTableada.html" title="falda"><button
             class="btn btn-sm btn-outline-secondary" id="cyn">Ir</button></a>
@@ -245,8 +314,7 @@
               <img src="img/Pantalon gris.jpeg" style="width: 190px;" title="pantalon" alt="pantalon">
                 <br>
                 <h5>Pantalon Gris</h5>
-                
-                <p>Precio: $85.00</p>
+                <p class="card-price" data-precio="95.00">$95.00</p>
             </div>
             <a href="pantalon.html" title="pantalon"><button
             class="btn btn-sm btn-outline-secondary" id="evg">Ir</button></a>
@@ -261,8 +329,7 @@
               <img src="img/Blusa lila.png" style="width: 180px;" title="blusa" alt="blusa">
                 <br>
                 <h5>Blusa Lila</h5>
-                <p>Precio: $85.00</p>
-  
+                <p class="card-price" data-precio="85.00">$85.00</p>
             </div>
             <a href="blusa.html" title="blusa"><button
             class="btn btn-sm btn-outline-secondary" id="son">Ir</button></a>
@@ -277,8 +344,7 @@
               <img src="img/vestidoCuadritos.jpeg" style="width: 170px;" title="vestido" alt="vestido">
                 <br>
                 <h5>Vestido Campesino</h5>
-                <p>Precio: $85.00</p>
-  
+                <p class="card-price" data-precio="85.00">$85.00</p>
             </div>
             <a href="vestido.html" title="vestido"><button
             class="btn btn-sm btn-outline-secondary" id="son">Ir</button></a>
