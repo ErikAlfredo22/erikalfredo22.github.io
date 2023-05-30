@@ -49,6 +49,20 @@
           case 'desc':
             cards.sort((a, b) => b.querySelector('h5').textContent.localeCompare(a.querySelector('h5').textContent));
             break;
+          case 'price-asc':
+            cards.sort((a, b) => {
+              const priceA = parseFloat(a.querySelector('p').textContent.replace(/[^0-9.-]+/g, ''));
+              const priceB = parseFloat(b.querySelector('p').textContent.replace(/[^0-9.-]+/g, ''));
+              return priceA - priceB;
+            });
+            break;
+          case 'price-desc':
+            cards.sort((a, b) => {
+              const priceA = parseFloat(a.querySelector('p').textContent.replace(/[^0-9.-]+/g, ''));
+              const priceB = parseFloat(b.querySelector('p').textContent.replace(/[^0-9.-]+/g, ''));
+              return priceB - priceA;
+            });
+            break;
           default:
             // Predeterminado: mantener el orden original
             break;
@@ -58,27 +72,6 @@
         cards.forEach((card) => cardsContainer.appendChild(card));
       });
     });
-
-    function ordenarPorPrecio(orden) {
-      var tabla = document.getElementById("tablaPersonas");
-      var filas = tabla.getElementsByTagName("tr");
-      var arr = Array.prototype.slice.call(filas, 1);
-
-      arr.sort(function(a, b) {
-        var precioA = parseFloat(a.getAttribute("data-precio"));
-        var precioB = parseFloat(b.getAttribute("data-precio"));
-
-        if (orden === "asc") {
-          return precioA - precioB;
-        } else {
-          return precioB - precioA;
-        }
-      });
-
-      for (var i = 0; i < arr.length; i++) {
-        tabla.appendChild(arr[i]);
-      }
-    }
   </script>
   
 
@@ -192,8 +185,8 @@
           <option value="default">Predeterminado</option>
           <option value="asc">Orden alfabético ascendente</option>
           <option value="desc">Orden alfabético descendente</option>
-          <option value="asc">Precio ascendente</option>
-          <option value="desc">Precio descendente</option>
+          <option value="price-asc">Precio ascendente</option>
+          <option value="price-desc">Precio descendente</option>
         </select>
       </div>
     </div>
