@@ -102,3 +102,88 @@ main {
 .fondo-aviso-cookies.activo {
 	display: block;
 }
+
+#espacio {
+
+	margin-top: 100px;
+
+
+  }
+
+  #color {
+	background-color: whitesmoke;
+	margin-left: 8%;
+	margin-right: 8%;
+	padding-bottom: 50px;
+	;
+  }
+
+  #izquierda {
+
+	width: 30%;
+	float: left;
+	padding-right: 30px;
+  }
+
+  #derecha {
+
+	width: 65%;
+	float: left;
+  }
+
+  #imagenes {
+
+	height: 300px;
+	margin-left: 5%;
+	margin-right: 5%;
+
+  }
+
+  #estrella {
+	font-size: 30px;
+	color: yellow;
+
+  }
+
+  #estre {
+	font-size: 30px;
+
+
+  }
+
+  #tablaPersonas {
+
+	margin-top: 20px;
+	;
+  }
+
+  #espacio {
+
+	margin-top: 100px;
+
+
+  }
+
+  #imagenes {
+	width: 250px;
+	height: 300px;
+	margin-left: 20%;
+	margin-right: 20%;
+
+  }
+
+  #diseño {
+	font-size: 15px;
+	margin-left: 20px;
+	text-align: center;
+	padding-bottom: 20px;
+	width: 300px;
+	height: 400px;
+
+  }
+
+  #tablaPersonas {
+
+	margin-top: 20px;
+	;
+  }
