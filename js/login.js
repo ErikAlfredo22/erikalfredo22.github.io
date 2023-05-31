@@ -26,7 +26,7 @@ console.log('hola')
         window.location="index_admin.html";
         flag = true
     }else if(usuarioTxt === user.usuario && passwordTxt === user.password){
-        window.location="index_user.html";
+        window.location="index.html";
         flag = true;
     }
 
