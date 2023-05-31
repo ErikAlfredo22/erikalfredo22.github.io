@@ -101,26 +101,9 @@
 
         <br>
         <br>
-        <div id="tit">
 
-        </div>
-        <form>
-          <div class="form-group">
-            <label>Clasificacion:</label>
-            <div class="clasificacion">
-              <input id="radio1" type="radio" name="estrellas" value="5"><!--
-            --><label id="estrella" for="radio1">★</label><!--
-            --><input id="radio2" type="radio" name="estrellas" value="4"><!--
-            --><label id="estrella" for="radio2">★</label><!--
-            --><input id="radio3" type="radio" name="estrellas" value="3"><!--
-            --><label id="estrella" for="radio3">★</label><!--
-            --><input id="radio4" type="radio" name="estrellas" value="2"><!--
-            --><label id="estrella" for="radio4">★</label><!--
-            --><input id="radio5" type="radio" name="estrellas" value="1"><!--
-            --><label id="estrella" for="radio5">★</label>
-            </div>
-          </div>
-        </form>
+        <container id="tit"></container>
+        
         <div class="col-lg-12">
 
           <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
@@ -130,31 +113,29 @@
               alt="PayPal, la forma más segura y rápida de pagar en línea.">
           </form>
           <br>
-          <br>
 
           <div id="paypal-button-container" style="text-align: center"></div>
-          <br>
-          <br>
         </div>
 
 
         <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="table-responsive">
-                <table id="tablaPersonas" class="table table-striped table-bordered table-condensed"
-                  style="width:100% ">
-
-                  <tbody id="res">
-
-                  </tbody>
-                  <button id="cinu" type="button" class="btn btn-success" data-toggle="modal">ver detalles</button>
-                  <tbody id="respuesta">
-                  </tbody>
-                </table>
+          <form>
+            <div class="form-group">
+              <label>Clasificacion:</label>
+              <div class="clasificacion">
+                <input id="radio1" type="radio" name="estrellas" value="5"><!--
+              --><label id="estrella" for="radio1">★</label><!--
+              --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+              --><label id="estrella" for="radio2">★</label><!--
+              --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+              --><label id="estrella" for="radio3">★</label><!--
+              --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+              --><label id="estrella" for="radio4">★</label><!--
+              --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+              --><label id="estrella" for="radio5">★</label>
               </div>
             </div>
-          </div>
+          </form>
 
           <form>
             <div class="form-group">
@@ -215,32 +196,34 @@
     </div>
 
     <!--Footer-->
-		<footer class="container-fluid py-5 my-5 border-top" style="background-color: rgb(133, 71, 122);">
+    <footer class="container-fluid py-5 my-5 border-top" style="background-color: rgb(133, 71, 122);">
       <div class="row justify-content-center">
         <div class="col-12 col-md-3 order-2 order-md-1 text-center">
-        <small class="d-block text-light">© 2022-2023 MisLindasChacharas</small>
+          <small class="d-block text-light">© 2022-2023 MisLindasChacharas</small>
         </div>
         <div class="col-6 col-md-3 order-1 order-md-2 text-center">
-        <h5 class="text-light">Características</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="text-muted-light" style="color: white;">Buenos</a></li>
-          <li><a class="text-muted-light" style="color: white;">Bonitos</a></li>
-          <li><a class="text-muted-light" style="color: white;">Baratos</a></li>
-          <li><a class="text-muted-light" style="color: white;">Disponibles</a></li>
-          
-        </ul>
+          <h5 class="text-light">Características</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted-light" style="color: white;">Buenos</a></li>
+            <li><a class="text-muted-light" style="color: white;">Bonitos</a></li>
+            <li><a class="text-muted-light" style="color: white;">Baratos</a></li>
+            <li><a class="text-muted-light" style="color: white;">Disponibles</a></li>
+
+          </ul>
         </div>
         <div class="col-6 col-md-3 order-1 order-md-2 text-center">
-        <h5 class="text-light">Contactanos</h5>
-        <ul class="list-unstyled text-small">
-          <li><a href="https://www.facebook.com/Mis.Lindas.Chacharas" class="text-light" title="facebook">Facebook</a></li>
-  
-          <li><a href="https://www.instagram.com/mislindaschacharas/" class="text-light" title="instagram">Instagram</a></li>
-          <li><a class="text-light">MisLindasChacharas@gmail.com</a></li>
-        </ul>
+          <h5 class="text-light">Contactanos</h5>
+          <ul class="list-unstyled text-small">
+            <li><a href="https://www.facebook.com/Mis.Lindas.Chacharas" class="text-light" title="facebook">Facebook</a>
+            </li>
+
+            <li><a href="https://www.instagram.com/mislindaschacharas/" class="text-light"
+                title="instagram">Instagram</a></li>
+            <li><a class="text-light">MisLindasChacharas@gmail.com</a></li>
+          </ul>
         </div>
       </div>
-      </footer>
+    </footer>
 
     <script
       src="https://www.paypal.com/sdk/js?client-id=AU4PD63W4zCsCR_PKoyYvTuQDh3d-KlEewpepu1VtE5tgp3kCsNUbNwhUAtpNwSpObc5-yjrsnxD2ADV&currency=MXN"></script>
@@ -266,10 +249,8 @@
     </script>
 
 
-    <script src="js/Aretes de girasol.js"></script>
     <script src="js/reseña.js"></script>
     <script src="catalago/Aretes de girasol.js"></script>
-    <script src="Productos.json"></script>
     <script src="res.json"></script>
 
 </body>
