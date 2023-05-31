@@ -174,6 +174,7 @@
               <tr>
                 <th>Nombre</th>
                 <th>Reseña</th>
+                <th>Calificación</th>
               </tr>
             </thead>
             <tbody id="rese">
@@ -182,6 +183,7 @@
 
           <script>
             document.getElementById("resp").addEventListener("click", function () {
+              var calif = document.querySelector('input[name="estrellas"]:checked').value;
               var resena = document.getElementById("resenaInput").value;
               var nom = document.getElementById("Nombre").value;
               console.log("Reseña enviada:", resena, nom);
@@ -200,14 +202,14 @@
               var celdaResena = fila.insertCell();
               celdaResena.innerHTML = resena;
 
+              var celdaCalificacion = fila.insertCell();
+              celdaCalificacion.innerHTML = calif;
+
               document.getElementById("resenaInput").value = "";
               document.getElementById("Nombre").value = "";
+
             });
           </script>
-
-
-
-
         </div>
       </div>
     </div>
