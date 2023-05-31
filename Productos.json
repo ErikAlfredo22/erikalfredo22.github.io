@@ -21,55 +21,65 @@
         "nombre": "Aretes de nube",
         "cantidad": "10",
         "descripción": "Los aretes de nubes son joyas para las orejas que presentan diseños inspirados en las formas y texturas de las nubes. Estos aretes son populares entre las personas que buscan una joya con un toque de fantasía o imaginación. También pueden ser una excelente opción para los amantes de la meteorología o de la astronomía. Además, los aretes de nubes pueden ser una buena elección para complementar un outfit con un toque suave y romántico.",
-        "precio": "$50.00"
+        "precio": "$50.00",
+        "imagen": "img/Aretes de nubes.png"
+
     },
     {
         "id": 4,
         "nombre": "Balsamo",
         "cantidad": "20",
         "descripción": "balsamo en forma de fresa, contiene pigmento que pinta ligeramente para un toque natural",
-        "precio": "$20.00"
+        "precio": "$20.00",
+        "imagen": "img/balsamo.png"
     },
     {
         "id": 5,
         "nombre": "Mascarillas",
         "cantidad": "20",
         "descripción": " Nuestras mascarillas en presentacion de cannabi con contenido fresco, se recomienda guardar en un lugar seco y sin exposicion al sol para conservar la calidad y frescura del producto.",
-        "precio": "$5.00"
+        "precio": "$5.00",
+        "imagen": "img/mascarillas.png"
     },
     {
         "id": 6,
         "nombre": "Cremas para manos ",
         "cantidad": "14",
         "descripción": " Cremas para manos en diferentes presentaciones, esencia aleatoria cómo miel, aguacate, leche, gardenia, té verde, flor de cerezo,almendra, presentación de 30g",
-        "precio": "$10.00"
+        "precio": "$10.00",
+        "imagen": "img/crema.jpeg"
     },
     {
         "id": 7,
         "nombre": "Falda Tableada ",
         "cantidad": "2",
         "descripción": " Falda unitalla, color amarillo con estampado a cuadros, tela suave con volado.",
-        "precio": "$99.00"
+        "precio": "$99.00",
+        "imagen": "img/faldaamarilla.png"
     },
     {
         "id": 8,
         "nombre": "Pantalon Gris ",
         "cantidad": "5",
         "descripción": " Pantalón con estampado de cuadros gris y negro, tela tipo gabardina, incluye cinto de tela.",
-        "precio": "$99.00"
+        "precio": "$99.00",
+        "imagen": "img/pantalon gris.jpeg"
     },
     {
         "id": 9,
         "nombre": " Blusa Lila ",
         "cantidad": "14",
         "descripción": " Blusa lila pastel, unitalla con lazos corte crop top y mangas largas.",
-        "precio": "$85.00"
+        "precio": "$85.00",
+        "imagen": "img/blusa lila.png"
     },
     {
         "id": 10,
         "nombre": "Vestido Campesino  ",
         "cantidad": "14",
         "descripción": " Vestido con estampado a cuadros blanco y rojo, incluye tirantes ajustables, coste tipo A.",
-        "precio": "$99.00"
+        "precio": "$99.00",
+        "imagen": "img/vestidoCuadritos.jpeg"
+        
     }
 ]
