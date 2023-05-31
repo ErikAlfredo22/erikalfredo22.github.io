@@ -19,7 +19,7 @@ function cel(){
 
             for (let item of datos) {
                 //console.log(item.precio);
-             res.innerHTML += "<td>"+item.nombre+ "</td><td>"+item.descripción+"</td>"
+                res.innerHTML += "<td>"+item.nombre+ "</td><td>"+item.descripción+"</td><td>"+item.calificacion+"</td>"
                 
             
                
