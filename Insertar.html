@@ -1,160 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
+<!--Formulario-->
+<div class="centrarAll">
+    <div class="container">
+        <div class="title">Insertar</div>
+        <form class="form" id="insertForm">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Nombre del producto</span>
+                    <input type="text" placeholder="Inserta el nombre del producto" id="nombre">
+                </div>
+                <div class="input-box">
+                    <span class="details">Cantidad</span>
+                    <input type="text" placeholder="Inserta la cantidad del producto" id="cantidad">
+                </div>
+                <div class="input-box">
+                    <span class="details">Descripción</span>
+                    <input type="text" placeholder="Inserta la descripción del producto" id="descripcion">
+                </div>
+                <div class="input-box">
+                    <span class="details">Precio</span>
+                    <input type="text" placeholder="Inserta el precio del producto" id="precio">
+                </div>
+                <div class="input-box">
+                    <span class="details">Imagen</span>
+                    <input type="text" placeholder="Inserta el URL de la imagen" id="imagen">
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Insertar">
+            </div>
+        </form>
+    </div>
+</div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD</title>
-</head>
+<script>
+    function goBack() {
+        window.history.back();
+    }
 
-<body>
-    <!--Formulario de Inserción-->
-    <h2>Insertar Producto</h2>
-    <form id="insertForm">
-        <label for="nombre">Nombre del producto:</label>
-        <input type="text" id="nombre" required>
-        <label for="cantidad">Cantidad:</label>
-        <input type="number" id="cantidad" required>
-        <label for="descripcion">Descripción:</label>
-        <input type="text" id="descripcion" required>
-        <label for="precio">Precio:</label>
-        <input type="number" id="precio" required>
-        <label for="imagen">Imagen:</label>
-        <input type="text" id="imagen" required>
-        <button type="submit">Insertar</button>
-    </form>
+    const insertForm = document.getElementById('insertForm');
+    insertForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const nombre = document.getElementById('nombre').value;
+        const cantidad = document.getElementById('cantidad').value;
+        const descripcion = document.getElementById('descripcion').value;
+        const precio = document.getElementById('precio').value;
+        const imagen = document.getElementById('imagen').value;
 
-    <!--Tabla de Productos-->
-    <h2>Lista de Productos</h2>
-    <table id="productosTable">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Cantidad</th>
-                <th>Descripción</th>
-                <th>Precio</th>
-                <th>Imagen</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody id="productosBody">
-        </tbody>
-    </table>
+        // Objeto con los datos a enviar
+        const data = {
+            nombre: nombre,
+            cantidad: cantidad,
+            descripcion: descripcion,
+            precio: precio,
+            imagen: imagen
+        };
 
-    <script>
-        // Función para cargar los productos desde el archivo JSON
-        function cargarProductos() {
-            const productosBody = document.getElementById('productosBody');
-            productosBody.innerHTML = ''; // Limpiar tabla antes de cargar los datos
-
-            // Realizar una solicitud AJAX para obtener los datos del archivo JSON
-            const xhr = new XMLHttpRequest();
-            xhr.open('GET', 'productos.json', true);
-            xhr.onload = function () {
-                if (xhr.status === 200) {
-                    const productos = JSON.parse(xhr.responseText);
-
-                    // Recorrer los productos y agregar filas a la tabla
-                    productos.forEach(function (producto, index) {
-                        const row = document.createElement('tr');
-                        row.innerHTML = `
-                            <td>${producto.nombre}</td>
-                            <td>${producto.cantidad}</td>
-                            <td>${producto.descripcion}</td>
-                            <td>${producto.precio}</td>
-                            <td>${producto.imagen}</td>
-                            <td>
-                                <button onclick="editarProducto(${index})">Editar</button>
-                                <button onclick="eliminarProducto(${index})">Eliminar</button>
-                            </td>
-                        `;
-                        productosBody.appendChild(row);
-                    });
-                }
-            };
-            xhr.send();
-        }
-
-        // Función para insertar un nuevo producto
-        function insertarProducto(event) {
-            event.preventDefault();
-
-            // Obtener los valores del formulario de inserción
-            const nombre = document.getElementById('nombre').value;
-            const cantidad = document.getElementById('cantidad').value;
-            const descripcion = document.getElementById('descripcion').value;
-            const precio = document.getElementById('precio').value;
-            const imagen = document.getElementById('imagen').value;
-
-            // Realizar una solicitud AJAX para agregar el producto al archivo JSON
-            const xhr = new XMLHttpRequest();
-            xhr.open('POST', 'productos.json', true);
-            xhr.setRequestHeader('Content-type', 'application/json');
-            xhr.onload = function () {
-                if (xhr.status === 200) {
-                    // Cargar los productos actualizados después de la inserción
-                    cargarProductos();
-                    // Limpiar el formulario
-                    document.getElementById('insertForm').reset();
-                }
-            };
-            xhr.send(JSON.stringify({
-                nombre: nombre,
-                cantidad: cantidad,
-                descripcion: descripcion,
-                precio: precio,
-                imagen: imagen
-            }));
-        }
-
-        // Función para eliminar un producto
-        function eliminarProducto(index) {
-            // Realizar una solicitud AJAX para eliminar el producto del archivo JSON
-            const xhr = new XMLHttpRequest();
-            xhr.open('DELETE', `productos.json?index=${index}`, true);
-            xhr.onload = function () {
-                if (xhr.status === 200) {
-                    // Cargar los productos actualizados después de la eliminación
-                    cargarProductos();
-                }
-            };
-            xhr.send();
-        }
-
-        // Función para editar un producto
-        function editarProducto(index) {
-            // Obtener los valores del producto seleccionado
-            const nombre = prompt('Ingrese el nuevo nombre:');
-            const cantidad = prompt('Ingrese la nueva cantidad:');
-            const descripcion = prompt('Ingrese la nueva descripción:');
-            const precio = prompt('Ingrese el nuevo precio:');
-            const imagen = prompt('Ingrese la nueva imagen:');
-
-            // Realizar una solicitud AJAX para actualizar el producto en el archivo JSON
-            const xhr = new XMLHttpRequest();
-            xhr.open('PUT', `productos.json?index=${index}`, true);
-            xhr.setRequestHeader('Content-type', 'application/json');
-            xhr.onload = function () {
-                if (xhr.status === 200) {
-                    // Cargar los productos actualizados después de la actualización
-                    cargarProductos();
-                }
-            };
-            xhr.send(JSON.stringify({
-                nombre: nombre,
-                cantidad: cantidad,
-                descripcion: descripcion,
-                precio: precio,
-                imagen: imagen
-            }));
-        }
-
-        // Cargar los productos al cargar la página
-        cargarProductos();
-
-        // Agregar el evento de envío al formulario de inserción
-        document.getElementById('insertForm').addEventListener('submit', insertarProducto);
-    </script>
-</body>
-
-</html>
+        // Realizar solicitud AJAX para enviar los datos al servidor
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', '/insertar', true);
+        xhr.setRequestHeader('Content-type', 'application/json');
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                // Redirigir a otra página después de la inserción exitosa
+                window.location.href = "index_admin";
+            }
+        };
+        xhr.send(JSON.stringify(data));
+    });
+</script>
