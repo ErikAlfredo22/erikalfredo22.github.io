@@ -47,15 +47,11 @@
                                     <th>Descripción</th>
                                     <th>Precio</th>
                                     <th>Imagen</th>
-                                  
-                                    <th> <button id="eliminar" type="button" class="btn btn-success" data-toggle="modal">Eliminar</button></th>
+                                    <th><button id="eliminar" type="button" class="btn btn-success" data-toggle="modal">Eliminar</button></th>
                                 </tr>
                             </thead>
                             <tbody id="res">
-
-                              
                             </tbody>
-                            
                         </table>
                     </div>
                 </div>
@@ -97,10 +93,18 @@
             </div>
         </div>
     </div>
+
     <script src="js/productos.js"></script>
     <script src="js/busqueda.js"></script>
     <script src="Productos.json"></script>
-
+    
+    <script>
+        const openCloseBtn = document.getElementById('open-close');
+        const nav = document.querySelector('nav');
+        openCloseBtn.addEventListener('click', () => {
+            nav.classList.toggle('open');
+        });
+    </script>
 </body>
 
 </html>
