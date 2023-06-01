@@ -3,7 +3,7 @@
         "id": 1,
         "nombre": "Aretes de girasol",
         "cantidad": "24",
-        "descripcion": " Los aretes de girasol son joyas para las orejas que presentan diseños inspirados en la flor de girasol. Por lo general, estos aretes están hechos de materiales como el metal, la plata, el oro o la resina, y pueden tener detalles en esmalte, pintura o piedras preciosas, Estos aretes son populares entre las personas que aman la naturaleza y la jardinería, ya que el girasol es una flor que simboliza la felicidad, la energía y el sol. Además, pueden ser una excelente opción de regalo para alguien que ama las flores o para alguien que busca una joya con un toque de personalidad y estilo.",
+        "descripcion": "Los aretes de girasol son joyas para las orejas que presentan diseños inspirados en la flor de girasol. Por lo general, estos aretes están hechos de materiales como el metal, la plata, el oro o la resina, y pueden tener detalles en esmalte, pintura o piedras preciosas, Estos aretes son populares entre las personas que aman la naturaleza y la jardinería, ya que el girasol es una flor que simboliza la felicidad, la energía y el sol. Además, pueden ser una excelente opción de regalo para alguien que ama las flores o para alguien que busca una joya con un toque de personalidad y estilo.",
         "precio": "$35.00", 
         "imagen": "img/Aretes de girasol.png"
     },
@@ -11,7 +11,7 @@
         "id": 2,
         "nombre": "Aretes de panda",
         "cantidad": "20",
-        "descripción": "Los aretes de panditas son joyas para las orejas que presentan diseños de pequeños osos panda. Estos aretes son populares entre las personas que disfrutan de la moda kawaii o la cultura pop japonesa, ya que los pandas son un símbolo popular en estas áreas. Además, pueden ser una excelente opción de regalo para alguien que ama a estos adorables animales.",
+        "descripcion": "Los aretes de panditas son joyas para las orejas que presentan diseños de pequeños osos panda. Estos aretes son populares entre las personas que disfrutan de la moda kawaii o la cultura pop japonesa, ya que los pandas son un símbolo popular en estas áreas. Además, pueden ser una excelente opción de regalo para alguien que ama a estos adorables animales.",
         "precio": "$35.00",
         "imagen": "img/Aretes de panda.png"
         
@@ -20,7 +20,7 @@
         "id": 3,
         "nombre": "Aretes de nube",
         "cantidad": "10",
-        "descripción": "Los aretes de nubes son joyas para las orejas que presentan diseños inspirados en las formas y texturas de las nubes. Estos aretes son populares entre las personas que buscan una joya con un toque de fantasía o imaginación. También pueden ser una excelente opción para los amantes de la meteorología o de la astronomía. Además, los aretes de nubes pueden ser una buena elección para complementar un outfit con un toque suave y romántico.",
+        "descripcion": "Los aretes de nubes son joyas para las orejas que presentan diseños inspirados en las formas y texturas de las nubes. Estos aretes son populares entre las personas que buscan una joya con un toque de fantasía o imaginación. También pueden ser una excelente opción para los amantes de la meteorología o de la astronomía. Además, los aretes de nubes pueden ser una buena elección para complementar un outfit con un toque suave y romántico.",
         "precio": "$50.00",
         "imagen": "img/Aretes de nubes.png"
 
@@ -29,7 +29,7 @@
         "id": 4,
         "nombre": "Balsamo",
         "cantidad": "20",
-        "descripción": "balsamo en forma de fresa, contiene pigmento que pinta ligeramente para un toque natural",
+        "descripcion": "balsamo en forma de fresa, contiene pigmento que pinta ligeramente para un toque natural",
         "precio": "$20.00",
         "imagen": "img/balsamo.png"
     },
@@ -37,7 +37,7 @@
         "id": 5,
         "nombre": "Mascarillas",
         "cantidad": "20",
-        "descripción": " Nuestras mascarillas en presentacion de cannabi con contenido fresco, se recomienda guardar en un lugar seco y sin exposicion al sol para conservar la calidad y frescura del producto.",
+        "descripcion": " Nuestras mascarillas en presentacion de cannabi con contenido fresco, se recomienda guardar en un lugar seco y sin exposicion al sol para conservar la calidad y frescura del producto.",
         "precio": "$5.00",
         "imagen": "img/mascarillas.png"
     },
@@ -45,7 +45,7 @@
         "id": 6,
         "nombre": "Cremas para manos ",
         "cantidad": "14",
-        "descripción": " Cremas para manos en diferentes presentaciones, esencia aleatoria cómo miel, aguacate, leche, gardenia, té verde, flor de cerezo,almendra, presentación de 30g",
+        "descripcion": " Cremas para manos en diferentes presentaciones, esencia aleatoria cómo miel, aguacate, leche, gardenia, té verde, flor de cerezo,almendra, presentación de 30g",
         "precio": "$10.00",
         "imagen": "img/crema.jpeg"
     },
@@ -53,7 +53,7 @@
         "id": 7,
         "nombre": "Falda Tableada ",
         "cantidad": "2",
-        "descripción": " Falda unitalla, color amarillo con estampado a cuadros, tela suave con volado.",
+        "descripcion": " Falda unitalla, color amarillo con estampado a cuadros, tela suave con volado.",
         "precio": "$99.00",
         "imagen": "img/faldaamarilla.png"
     },
@@ -61,7 +61,7 @@
         "id": 8,
         "nombre": "Pantalon Gris ",
         "cantidad": "5",
-        "descripción": " Pantalón con estampado de cuadros gris y negro, tela tipo gabardina, incluye cinto de tela.",
+        "descripcion": " Pantalón con estampado de cuadros gris y negro, tela tipo gabardina, incluye cinto de tela.",
         "precio": "$99.00",
         "imagen": "img/pantalon gris.jpeg"
     },
@@ -69,7 +69,7 @@
         "id": 9,
         "nombre": " Blusa Lila ",
         "cantidad": "14",
-        "descripción": " Blusa lila pastel, unitalla con lazos corte crop top y mangas largas.",
+        "descripcion": " Blusa lila pastel, unitalla con lazos corte crop top y mangas largas.",
         "precio": "$85.00",
         "imagen": "img/blusa lila.png"
     },
@@ -77,7 +77,7 @@
         "id": 10,
         "nombre": "Vestido Campesino  ",
         "cantidad": "14",
-        "descripción": " Vestido con estampado a cuadros blanco y rojo, incluye tirantes ajustables, coste tipo A.",
+        "descripcion": " Vestido con estampado a cuadros blanco y rojo, incluye tirantes ajustables, coste tipo A.",
         "precio": "$99.00",
         "imagen": "img/vestidoCuadritos.jpeg"
         
