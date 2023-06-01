@@ -2,40 +2,49 @@ const usuario = document.querySelector('#usuario');
 const password = document.querySelector('#password');
 const formulario = document.getElementById('form');
 
-
-const credenciales = {
-    usuario: 'admin',
-    password: 'admin'
-}
-
-const user = {
-    usuario: 'usuario',
-    password: 'usuario'
-}
-
-
-
+const users = [
+    {
+        usuario: 'alfredoerik@gmail.com',
+        password: '18defebrero'
+    },
+    {
+        usuario: 'otrousuario@gmail.com',
+        password: 'contraseña123'
+    },
+    {
+        usuario: 'ejemplo@gmail.com',
+        password: 'secreto456'
+    },
+    {
+        usuario: 'admin@root.com',
+        password: 'root123'
+    }
+];
 formulario.addEventListener('submit', (e) => {
     e.preventDefault();
-console.log('hola') 
+
     const usuarioTxt = usuario.value;
     const passwordTxt = password.value;
-    const flag = false;
+    let flag = false;
 
-    if (usuarioTxt === credenciales.usuario && passwordTxt === credenciales.password){
-        window.location="index_admin.html";
-        flag = true
-    }else if(usuarioTxt === user.usuario && passwordTxt === user.password){
-        window.location="index_user.html";
+    if (usuarioTxt === 'admin@root.com' && passwordTxt === 'root123') {
         flag = true;
+        window.alert('Bienvenido, Administrador');
+        window.location.href = 'index_admin.html';
+    } else {
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].usuario === usuarioTxt && users[i].password === passwordTxt) {
+                flag = true;
+                break;
+            }
+        }
+
+        if (flag) {
+            window.alert('Bienvenido');
+            window.location.href = 'indexUser.html';
+        } else {
+            window.alert('Usuario no existente');
+        }
     }
-
-    if(flag==true){
-        return window.alert('Welcome')
-    }else if(flag==flase){
-        return window.alert('Usuario no existente')
-    }
-    
-
-
 });
+
